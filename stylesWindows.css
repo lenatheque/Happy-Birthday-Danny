@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+#gameWindow {
+	margin: 0 auto;
+	width: 900px;
+	height: 600px;
+	position: relative;
+	overflow: hidden;
+	background-image: url("GameScreen.jpg");
+	background-repeat: no-repeat;
+}
+
+#gameOver {
+	visibility: hidden;
+	background-image: url("GameOver.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#winner{
+	visibility: hidden;
+	background-image: url("WinScreen.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 1.5em;
+}
+#nextLevel{
+	visibility: hidden;
+	background-image: url("nextLevel.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#infoScreen {
+	visibility: hidden;
+	background-image: url("HowToScreen.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 1.5em;
+}
+#btnBack{
+	top: 450px;
+	left: 550px;
+	font-size: 1.5em;
+}
+#btnStart {
+	position: absolute;
+	bottom: 25px;
+	right: 75px;
+	font-size: 1.5em;
+}
+
+#btnInfo {
+	position: absolute;
+	bottom: 25px;
+	left: 500px;
+	font-size: 1.5em;
+}
+
+#btnBackStart {
+	top: 500px;
+	right: 100px;
+	font-size: 1em;
+}
+
+#btnReset {
+	top: 500px;
+	left: 70px;
+	font-size: 1em;
+}
+
+#btnNext{
+	top: 500px;
+	left: 400px;
+	font-size: 1em;
+}
+
+#startWindow {
+	background-image: url("StartScreen.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#startWindow h1 {
+	margin-top: 180Px;
+	margin-left: 40px;
+}
+
+#startWindow p {
+	margin-left: 45px;
+	text-align: justify;
+	width: 280px;
+}
+
+#btnIntro {
+	top: 500px;
+	left: 700px;
+	font-size: 1em;
+}
+
+.timer {
+	color:wheat;
+	padding: .2em;
+	float: right;
+	margin-top: .2em;
+	clear: right;
+	font-size: 30px;
+	border: #fff 2px solid;
+}
+
+.otherWindows {
+	margin: 0 auto;
+	width: 900px;
+	height: 600px;
+	position: absolute;
+	color: #FFFFFF;
+	background-color: #000;
+	overflow: hidden;
+	/* when pieces of contents goes off gamescreen, it will stay hidden */
+	z-index: 100;
+}
+
+li {
+	list-style-type: disc;
+	width: 280px;
+	padding: .2em;
+	margin-left: 25px;
+}
+
+.score {
+	clear: left;
+	border: #fff 2px solid;
+	padding: .2em;
+	float: left;
+	color: #63FFF5;
+	font-size: 30px;
+	margin-top: .2em;
+}
+
+.points {
+	width: 100px;
+	opacity: 1;
+	left: -50%;
+	position: absolute;
+}
+
+.gameButton {
+	position: absolute;
+	z-index: 10;
+	padding: 20px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+	background: #bfd255;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfd255', endColorstr='#9ecb2d', GradientType=0);
+	/* IE6-9 */
+
+}
+
+     .box001 {
+            float: left;
+            width: 75px;
+            height: 15px;
+            margin: 12px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .box002 {
+            float: left;
+            width: 75px;
+            height: 15px;
+            margin: 12px;
+            padding: 10px;
+            border: 1px solid white;
+        }
+/********************
+*Customers
+*********************/
+.customers {
+	position: absolute;
+	top: 160px;
+	z-index:50;
+	left: -50% /* Hides Customers from main view*/
+}
+#customer1{
+	top:168px;
+
+}
+
+
+.dialogue {
+  position: absolute;
+  top: 65px;
+  z-index:50;
+  left: -50%;
+  transform: scale(-1,1);
+}
+
+/********************
+*Potatoes
+*********************/
+.potatoes {
+	position: absolute;
+	bottom: -50%;
+	z-index:50;
+}
+
+#baked {
+	left: 15%;
+}
+
+#curly {
+	left: 35%;
+}
+
+#frenchFries{
+	left: 55%;
+}
+
+#jalapeno{
+	left: 75%;
+}
+/***********************
+*Player
+**********************/
+
+#player {
+	position: absolute;
+	z-index:60;
+}
+
+#player.flip {
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+	-ms-filter: flip;
+	/*IE*/
+	filter: flip;
+	/*IE*/
+}

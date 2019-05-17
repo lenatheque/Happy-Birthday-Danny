@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Danny Boy</title>
+
+	<link href="stylesWindows.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+	</script>
+	<script type="text/javascript" src="windows.js"></script>
+</head>
+
+<body>
+	<div id="gameWindow">
+		<!-- Game Window -->
+		<div id="score" class="score"></div>
+		<div id="points" class="points">100</div>
+		<div id="timer"class="timer"></div>
+		<!-- Start screen & Rules -->
+		<div id="startWindow" class="otherWindows">
+			<button id="btnStart" class="gameButton">PLAY</button>
+			<button id="btnInfo" class="gameButton">RULES</button>
+		</div>
+
+		<!-- Orders -->
+		<img src="Option3.png" alt="I want Baked Potato!" class="dialogue" id="baked_order">
+		<img src="Option2.png" alt="I want French Fries!" class="dialogue" id="frenchFries_order">
+		<img src="Option4.png" alt="I want Jalapeno Potato!" class="dialogue" id=jalapeno_order>
+		<img src="Option1.png" alt="I want Curly Potato!" class="dialogue" id="curly_order">
+
+		<!-- Characters -->
+		<img src="Customer1.gif" alt="Customer 1" class="customers" id="customer1">
+		<img src="Customer2.gif" alt="Customer 2" class="customers" id="customer2">
+		<img src="Customer3.gif" alt="Customer 3" class="customers" id=customer3>
+		<img src="Customer4.gif" alt="Customer 4" class="customers" id="customer4">
+		<img src="MainCursor.png" id="player" class="player">
+
+		<!-- Potatoes -->
+		<img src="Baked.png" alt="Baked Potato" class="potatoes" id="baked">
+		<img src="FrenchFries.png" alt="French Fries" class="potatoes" id="frenchFries">
+		<img src="Jalapeno.png" alt="Jalapeno Potato" class="potatoes" id=jalapeno>
+		<img src="Curly.png" alt="Curly Potato" class="potatoes" id="curly">
+		<img src="MainCursor.png" id="player" class="player">
+
+		<!-- Game over screen -->
+		<div id="gameOver" class="otherWindows">
+			<button id="btnReset" class="gameButton">START OVER</button>
+			<button id="btnBackStart" class="gameButton">INTRO</button>
+		</div>
+
+		<div id="infoScreen" class="otherWindows">
+			<button id="btnBack" class="gameButton">BACK</button>
+
+		</div>
+
+		<!-- Winner screen -->
+		<div id="winner" class="otherWindows">
+			<button id="btnIntro" class="gameButton">INTRO</button>
+			<button id="btnNext" class="gameButton">NEXT</button>
+		</div>
+		<div id="infoScreen" class="otherWindows">
+			<button id="btnBack" class="gameButton">BACK</button>
+
+		</div>
+		<!-- Next level screen -->
+		<div id="nextLevel" class="otherWindows">
+			<div id="score2" class="score"></div>
+			<div id="points2" class="points">100</div>
+			<div id="timer2" class="timer"></div>
+		</div>
+		<div id="infoScreen" class="otherWindows">
+			<button id="btnBack" class="gameButton">BACK</button>
+
+		</div>
+
+
+	</div>
+
+</body>
+<!--audio-->
+<audio src="sound/Stage1.mp3" type="audio/mpeg" id="bgnMusic"></audio>
+<audio src="sound/GameOver.mp3" type="audio/mpeg" id="endMusic"></audio>
+<audio src="sound/startScreen.mp3" type="audio/mpeg" id="infoMusic"></audio>
+<audio src="sound/Stage2.mp3" type="audio/mpeg" id="stage2Music"></audio>
+<audio src="sound/Winner.mp3" type="audio/mpeg" id="winnerMusic"></audio>
+<audio src="sound/fail.mp3" type="audio/mpeg" id="fail"></audio>
+<audio src="sound/point.mp3" type="audio/mpeg" id="point"></audio>
+
+
+</html>
