@@ -10,8 +10,6 @@ $(document).ready(function () {
 
 	//Initially sets score to 0
 	updateScore(0);
-
-
 	console.log("hellou")
 	$('#btnStart').click(function () {
 		hideStart();
