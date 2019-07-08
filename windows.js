@@ -429,7 +429,7 @@ $(document).ready(function() {
       duration: 2000
     });
   }
-
+////Food stuff
   function popInFood(potato) {
     $(potato).animate({
       bottom: "10%",
@@ -477,7 +477,8 @@ $(document).ready(function() {
           duration: 300
         });
         popOutCustomer(custServed);
-        $("#point")[0].play();
+		$("#point")[0].play();
+		randomizeCustomer();
       } else {
         points = calcPoints() * -1; //Points become negative due to food mismatch
         $(custServed).effect(
