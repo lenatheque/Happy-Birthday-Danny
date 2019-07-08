@@ -84,6 +84,9 @@ $(document).ready(function() {
     $("#endMusic")[0].currentTime = 0;
     $("#endMusic")[0].pause();
     $("#bgnMusic")[0].play();
+
+    ///// Reset the player position
+    playerPosition();
   }
   /***********************
    * Timer
@@ -154,11 +157,13 @@ $(document).ready(function() {
 
   var player = document.getElementById("player");
 
-  player.vx = gameWidth / 2; //placement of the image horizontally
-  player.vy = gameHeight / 2; //placement of the image vertically
-  player.width = 50; //width of the image
-  player.height = 67; //height of the image
-  player.speed = 8;
+  ///////Player icon placement when new level starts
+
+  function playerPosition() {
+	player.speed = 8;
+	player.style.visibility = 'visible';
+	console.log('player position ran');
+  }
 
   console.log(player.vy);
 
@@ -336,7 +341,8 @@ $(document).ready(function() {
     popInFood("#baked");
     popInFood("#curly");
     popInFood("#jalapeno");
-    randomizeCustomer();
+	randomizeCustomer();
+	playerPosition();
   }
 
   function showStart() {

@@ -244,6 +244,9 @@ li {
 #player {
 	position: absolute;
 	z-index:60;
+	visibility: hidden;
+	left:45%;
+	top:60%;
 }
 
 #player.flip {
