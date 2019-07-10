@@ -21,7 +21,7 @@
 
 #winner{
 	visibility: hidden;
-	background-image: url("WinScreen.jpg");
+	background-image: url("winScreen.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	text-align: center;
