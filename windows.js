@@ -160,9 +160,9 @@ $(document).ready(function() {
   ///////Player icon placement when new level starts
 
   function playerPosition() {
-	player.speed = 8;
-	player.style.visibility = 'visible';
-	console.log('player position ran');
+    player.speed = 8;
+    player.style.visibility = "visible";
+    console.log("player position ran");
   }
 
   console.log(player.vy);
@@ -308,10 +308,7 @@ $(document).ready(function() {
     $("#stage2Music")[0].currentTime = 0;
     $("#stage2Music")[0].pause();
     $("#winnerMusic")[0].play();
-    popInFood("#frenchFries");
-    popInFood("#baked");
-    popInFood("#curly");
-    popInFood("#jalapeno");
+    popAllFood();
     $(".customers").attr("style", "z-index: 50");
     $(".potatoes").attr("style", "z-index: 50");
     $(".potatoes").attr("style", "z-index: 50");
@@ -341,8 +338,8 @@ $(document).ready(function() {
     popInFood("#baked");
     popInFood("#curly");
     popInFood("#jalapeno");
-	randomizeCustomer();
-	playerPosition();
+    randomizeCustomer();
+    playerPosition();
   }
 
   function showStart() {
@@ -429,14 +426,24 @@ $(document).ready(function() {
       duration: 2000
     });
   }
-////Food stuff
+  // This animates the food order  to come into the screen
   function popInFood(potato) {
     $(potato).animate({
       bottom: "10%",
       duration: 2000
     });
   }
+  //makes all the food pop back in
+  function popAllFood() {
+    popInFood("#frenchFries");
+    popInFood("#baked");
+    popInFood("#curly");
+    popInFood("#jalapeno");
+  }
 
+  //returns the food back to its original position
+
+  //This creates the order for customer and displays it in the screen
   function showOrder(potato, position) {
     $(potato + "_order").offset({
       left: x
@@ -447,6 +454,35 @@ $(document).ready(function() {
         left: position
       })
       .fadeIn(1500);
+  }
+
+  ///// function that checks
+  function returnPotato(grabbedFood) {
+    if (grabbedFood === "#baked") {
+      $(grabbedFood).animate({
+		left: "5%",
+		top:"70%",
+        duration: 100
+      });
+    } else if (grabbedFood === "#curly"){
+		$(grabbedFood).animate({
+			left: "27%",
+			top:"70%",
+			duration: 100
+		  });
+	}else if (grabbedFood === "#frenchFries"){
+		$(grabbedFood).animate({
+			left: "50%",
+			top:"70%",
+			duration: 100
+		  });
+	}else {
+		$(grabbedFood).animate({
+			left: "75%",
+			top:"70%",
+			duration: 100
+		  });
+	}
   }
 
   function dragFood() {
@@ -468,17 +504,17 @@ $(document).ready(function() {
       if (grabbedFood == customerOrder[i]) {
         points = calcPoints();
         updateScore(points, customerPosition[i]);
-        $(grabbedFood).animate({
-          top: "-50%",
-          duration: 100
-        });
+
+        ///return potato back to its original position
+        returnPotato(grabbedFood);
+
         $(grabbedFood + "_order").animate({
           left: "-50%",
           duration: 300
         });
         popOutCustomer(custServed);
-		$("#point")[0].play();
-		randomizeCustomer();
+        $("#point")[0].play();
+        randomizeCustomer();
       } else {
         points = calcPoints() * -1; //Points become negative due to food mismatch
         $(custServed).effect(
