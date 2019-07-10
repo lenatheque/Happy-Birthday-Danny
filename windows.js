@@ -19,11 +19,8 @@ $(document).ready(function() {
     showStart();
   });
   $("#btnIntro").click(function() {
-    showStart();
-    popInFood("#frenchFries");
-    popInFood("#baked");
-    popInFood("#curly");
-    popInFood("#jalapeno");
+	showStart();
+	popAllFood();
     randomizeCustomer();
   });
   $("#btnInfo").click(function() {
@@ -72,10 +69,7 @@ $(document).ready(function() {
     console.log("Start");
     $("#startWindow").attr("style", "visibility: hidden");
     $("#gameWindow").attr("style", "visibility: visible");
-    popInFood("#frenchFries");
-    popInFood("#baked");
-    popInFood("#curly");
-    popInFood("#jalapeno");
+   	popAllFood();
     randomizeCustomer();
 
     $("#gameOver").attr("style", "visibility: hidden");
@@ -334,10 +328,7 @@ $(document).ready(function() {
     $(".potatoes").attr("style", "z-index: 150");
     $("#player").attr("style", "z-index: 160");
     $(".dialogue").attr("style", "z-index: 150");
-    popInFood("#frenchFries");
-    popInFood("#baked");
-    popInFood("#curly");
-    popInFood("#jalapeno");
+    popAllFood();
     randomizeCustomer();
     playerPosition();
   }
@@ -349,10 +340,7 @@ $(document).ready(function() {
     $("#winner").attr("style", "visibility: hidden");
     $("#winnerMusic")[0].currentTime = 0;
     $("#winnerMusic")[0].pause();
-    popInFood("#frenchFries");
-    popInFood("#baked");
-    popInFood("#curly");
-    popInFood("#jalapeno");
+    popAllFood();
     randomizeCustomer();
 
     //stop all music
