@@ -223,15 +223,14 @@ li {
 }
 
 #baked {
-	left: 15%;
+	left: 5%;
 }
 
 #curly {
-	left: 35%;
+	left: 27%;
 }
-
 #frenchFries{
-	left: 55%;
+	left: 50%;
 }
 
 #jalapeno{
@@ -244,6 +243,9 @@ li {
 #player {
 	position: absolute;
 	z-index:60;
+	visibility: hidden;
+	left:45%;
+	top:60%;
 }
 
 #player.flip {
