@@ -160,7 +160,7 @@ $(document).ready(function() {
   ///////Player icon placement when new level starts
 
   function playerPosition() {
-    player.speed = 8;
+    player.speed = 15;
     player.style.visibility = "visible";
     console.log("player position ran");
   }
