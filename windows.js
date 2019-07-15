@@ -78,7 +78,7 @@ $(document).ready(function() {
     randomizeCustomer();
 
     $("#gameOver").attr("style", "visibility: hidden");
-
+    $('#points').html('You need ' + points + "!")
     //music
     $("#endMusic")[0].currentTime = 0;
     $("#endMusic")[0].pause();
@@ -87,6 +87,7 @@ $(document).ready(function() {
     ///// Reset the player position
     playerPosition();
   }
+
   /***********************
    * Timer
    *************************/
@@ -292,6 +293,8 @@ $(document).ready(function() {
     stopCountdown();
     points = 50;
     score = 0;
+    timer = 30;
+    count= 30;
     $("#gameOver").attr("style", "visibility: visible");
     $("#nextLevel").attr("style", "visibility: hidden");
     $("#bgnMusic")[0].currentTime = 0;
