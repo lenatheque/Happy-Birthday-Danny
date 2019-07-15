@@ -64,7 +64,6 @@ $(document).ready(function() {
     console.log("this is level " + currentLevel);
     score = 0;
     $("#score").text(score);
-    count = 15;
     countdown();
     console.log("Start");
     $("#startWindow").attr("style", "visibility: hidden");
@@ -73,7 +72,7 @@ $(document).ready(function() {
     randomizeCustomer();
 
     $("#gameOver").attr("style", "visibility: hidden");
-
+    $('#points').html('You need ' + points + "!")
     //music
     $("#endMusic")[0].currentTime = 0;
     $("#endMusic")[0].pause();
@@ -82,12 +81,14 @@ $(document).ready(function() {
     ///// Reset the player position
     playerPosition();
   }
+
   /***********************
    * Timer
    *************************/
   //timer variable
-  var time = 13;
-  var count, t;
+  var time = 30;
+  var count = time;
+  var t;
 
   //Display timer in game
   function displayTimer() {
@@ -120,20 +121,26 @@ $(document).ready(function() {
   }
 
   //check winner
+  let points = 50;
   function checkWinner() {
-    if (score < 50) {
+    if (score < points) {
       showGameOver();
-    }
-    if (score >= 50) {
+    } else if (score >= 50) {
       showWinner();
       currentLevel++;
-      if (currentLevel === 2) {
-        score = 0;
-        count = 10;
-      } else if (currentLevel === 3) {
-        score = 0;
-        count = 8;
-      }
+      score = 0;
+      points += 25;
+      count = 30;
+
+
+
+      // if (currentLevel === 2) {
+      //   score = 0;
+      //   count = 10;
+      // } else if (currentLevel === 3) {
+      //   score = 0;
+      //   count = 8;
+      // }
     }
   }
 
@@ -154,7 +161,7 @@ $(document).ready(function() {
   ///////Player icon placement when new level starts
 
   function playerPosition() {
-    player.speed = 8;
+    player.speed = 15 ;
     player.style.visibility = "visible";
     console.log("player position ran");
   }
@@ -278,7 +285,10 @@ $(document).ready(function() {
 
   function showGameOver() {
     stopCountdown();
+    points = 50;
     score = 0;
+    timer = 30;
+    count= 30;
     $("#gameOver").attr("style", "visibility: visible");
     $("#nextLevel").attr("style", "visibility: hidden");
     $("#bgnMusic")[0].currentTime = 0;
