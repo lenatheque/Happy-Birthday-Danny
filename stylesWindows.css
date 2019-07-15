@@ -144,10 +144,11 @@ li {
 }
 
 .points {
-	width: 100px;
-	opacity: 1;
-	left: -50%;
+	left: 30%;
 	position: absolute;
+	color:black;
+	border: #fff 2px solid;
+
 }
 
 .gameButton {
