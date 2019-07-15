@@ -130,7 +130,6 @@ $(document).ready(function() {
   function checkWinner() {
     if (score < points) {
       showGameOver();
-      points = 50;
     } else if (score >= 50) {
       showWinner();
       currentLevel++;
@@ -291,6 +290,7 @@ $(document).ready(function() {
 
   function showGameOver() {
     stopCountdown();
+    points = 50;
     score = 0;
     $("#gameOver").attr("style", "visibility: visible");
     $("#nextLevel").attr("style", "visibility: hidden");
