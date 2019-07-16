@@ -72,7 +72,6 @@ $(document).ready(function() {
     randomizeCustomer();
 
     $("#gameOver").attr("style", "visibility: hidden");
-    $('#points').html('You need ' + points + "!")
     //music
     $("#endMusic")[0].currentTime = 0;
     $("#endMusic")[0].pause();
